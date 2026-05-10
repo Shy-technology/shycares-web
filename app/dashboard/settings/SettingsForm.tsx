@@ -148,8 +148,10 @@ function ServicesSection({ services }: { services: Service[] }) {
                 type="button"
                 onClick={() => {
                   if (confirm(`Delete "${s.name}"?`)) {
-                    startTransition(() => deleteService(s.id));
-                  }
+                     startTransition(async () => {
+                       await deleteService(s.id);
+                     });
+                   }
                 }}
                 disabled={pending}
                 className="btn-ghost text-sm text-red-600"
