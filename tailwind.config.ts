@@ -1,24 +1,35 @@
 import type { Config } from "tailwindcss";
 
+// Shycares brand kit:
+//   primary  = #040404 (near-black)
+//   surface  = #F0F3EC (light grey)
+//   accent   = sage green family (warm, pet-friendly)
+//
+// Class names from v1 are preserved (peach-*, cream-*, ink, sage-*) so existing
+// pages don't need rewriting; only the underlying color values change.
+
 const config: Config = {
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        // Warm & friendly pet care palette
+        // Surface / page-background scale (light grey)
         cream: {
-          50: "#FFFBF5",
-          100: "#FEF6E9",
-          200: "#FCEBCB",
+          50: "#FAFBF7", // page background
+          100: "#F0F3EC", // brand light grey — cards, chips, surfaces
+          200: "#E3E8DB", // hover state on light surfaces
         },
+        // Repurposed "peach" scale: now the BLACK CTA scale.
+        // peach-500 = primary brand black for buttons & strong actions.
         peach: {
-          50: "#FFF4EE",
-          100: "#FFE3D3",
-          200: "#FFC9AC",
-          300: "#FFA77F",
-          400: "#FF8855",
-          500: "#F26B33",
+          50: "#F0F3EC",
+          100: "#E8E8E2",
+          200: "#B3B3AC",
+          300: "#5A5A55",
+          400: "#1F1F1D",
+          500: "#040404", // CTA / primary brand color
         },
+        // Sage — warm accent for success states (confirmed, completed)
         sage: {
           50: "#F1F7F3",
           100: "#DEEBE2",
@@ -28,10 +39,11 @@ const config: Config = {
           500: "#3F7855",
           600: "#2F5D42",
         },
+        // Text colors
         ink: {
-          DEFAULT: "#2A1F1A",
-          soft: "#5C4F47",
-          muted: "#9A8C82",
+          DEFAULT: "#040404",
+          soft: "#2A2A2A",
+          muted: "#767676",
         },
       },
       fontFamily: {
@@ -39,13 +51,14 @@ const config: Config = {
         display: ["Fraunces", "Georgia", "serif"],
       },
       borderRadius: {
-        lg: "1rem",
-        xl: "1.5rem",
-        "2xl": "2rem",
+        lg: "0.75rem",
+        xl: "1.25rem",
+        "2xl": "1.5rem",
       },
       boxShadow: {
-        soft: "0 4px 20px -4px rgba(42, 31, 26, 0.08)",
-        warm: "0 10px 40px -10px rgba(242, 107, 51, 0.25)",
+        // No more "warm" glow — sharp, clean shadows that suit a B2B feel
+        soft: "0 4px 16px -4px rgba(4, 4, 4, 0.08)",
+        warm: "0 8px 24px -6px rgba(4, 4, 4, 0.15)",
       },
     },
   },
