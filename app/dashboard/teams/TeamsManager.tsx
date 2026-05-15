@@ -152,6 +152,7 @@ function TeamCard({ team, businessSlug }: { team: TeamWithMembers; businessSlug:
         </div>
 
         <div className="flex gap-2">
+          <RefreshPinButton teamId={team.id} />
           <button
             onClick={() => setShowPin(true)}
             className="btn-ghost text-xs"
@@ -326,6 +327,42 @@ function ChangePinModal({ team, onClose }: { team: Team; onClose: () => void }) 
           {pending ? "Saving…" : "Save new PIN"}
         </button>
       </div>
+    </div>
+  );
+}
+
+function RefreshPinButton({ teamId }: { teamId: string }) {
+  const [pending, startTransition] = useTransition();
+  const [newPin, setNewPin] = useState<string | null>(null);
+
+  function refresh() {
+    const pin = clientRandomPin();
+    startTransition(async () => {
+      const r = await updateTeamPin(teamId, pin);
+      if (r.ok) setNewPin(pin);
+      else alert(r.error ?? "Failed to refresh PIN");
+    });
+  }
+
+  return (
+    <div className="flex items-center gap-1.5">
+      {newPin && (
+        <span
+          className="font-mono text-xs bg-cream-100 px-2 py-0.5 rounded tracking-widest select-all"
+          title="New PIN — share with your team"
+        >
+          {newPin}
+        </span>
+      )}
+      <button
+        onClick={refresh}
+        disabled={pending}
+        className="btn-ghost text-xs"
+        title="Generate and save a new random PIN"
+      >
+        <RefreshCw className="h-3.5 w-3.5 mr-1" />
+        {pending ? "Refreshing…" : "Refresh PIN"}
+      </button>
     </div>
   );
 }

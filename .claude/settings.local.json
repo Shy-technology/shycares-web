@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir -Recurse -Depth 3 -Name)",
+      "Bash(Sort-Object)"
+    ]
+  }
+}
