@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Shy — Authorized Distributor of Rossari Pet Care",
+  title: "Shy — Distributors of Rossari Pet Care",
   description:
-    "Shy is an authorized distributor of Rossari Pet Care products in India. Premium dog food, cat food, grooming, supplements and more from Sniffy, Zippy, Toptail, Vetsense and Lozalo.",
+    "Shy is a distributor of Rossari Pet Care products in India. Premium dog food, cat food, grooming, supplements and more from Sniffy, Zippy, Toptail, Vetsense and Lozalo.",
   metadataBase: new URL("https://www.shycares.in"),
   openGraph: {
     title: "Shy — Rossari Pet Care Distributor",

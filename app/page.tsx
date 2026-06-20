@@ -50,7 +50,7 @@ function Hero() {
           <div className="inline-flex items-center gap-2 rounded-full bg-sage-500/20 border border-sage-400/40 px-4 py-1.5 mb-6">
             <span className="w-2 h-2 rounded-full bg-sage-400 animate-pulse" />
             <span className="text-sage-300 text-sm font-semibold tracking-wide uppercase">
-              Authorized Distributor
+              Distributors
             </span>
           </div>
 
@@ -60,7 +60,7 @@ function Hero() {
           </h1>
 
           <p className="text-lg md:text-xl text-white/70 mb-8 leading-relaxed max-w-2xl">
-            <strong className="text-white">Shy</strong> is an authorized distributor of the finest
+            <strong className="text-white">Shy</strong> is a distributor of the finest
             pet care brands in India. We currently carry{" "}
             <strong className="text-white">Rossari Pet Care</strong> — and are bringing more
             exceptional brands to you soon.
@@ -115,6 +115,7 @@ function OurBrands() {
               <span className="badge bg-sage-100 text-sage-600 font-semibold">
                 ✓ Available Now
               </span>
+
             </div>
             <p className="text-sm text-ink-soft leading-relaxed">
               India&apos;s most innovative pet care company — spanning premium nutrition,
@@ -403,16 +404,10 @@ function FeaturedProducts() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredProducts.map((p) => (
             <div key={p.name} className="card border-l-4 border-l-ink flex flex-col gap-3">
-              <div className="flex items-start justify-between">
-                <div>
-                  <span className="text-xs font-semibold text-ink-muted uppercase tracking-wide">{p.category}</span>
-                  <h3 className="text-lg font-display font-semibold text-ink mt-0.5">{p.name}</h3>
-                  <p className="text-sm text-ink-muted">{p.subtitle}</p>
-                </div>
-                <div className="text-right flex-shrink-0 ml-3">
-                  <div className="text-xl font-bold text-ink">{p.price}</div>
-                  <div className="text-xs text-ink-muted">{p.pack}</div>
-                </div>
+              <div>
+                <span className="text-xs font-semibold text-ink-muted uppercase tracking-wide">{p.category}</span>
+                <h3 className="text-lg font-display font-semibold text-ink mt-0.5">{p.name}</h3>
+                <p className="text-sm text-ink-muted">{p.subtitle}</p>
               </div>
 
               <p className="text-sm text-ink-soft leading-relaxed">{p.description}</p>
@@ -556,7 +551,7 @@ function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div>
             <span className="text-xl font-display font-semibold text-white">Shy</span>
-            <p className="text-white/40 text-sm mt-1">Authorized Distributor · Rossari Pet Care & more</p>
+            <p className="text-white/40 text-sm mt-1">Distributors · Rossari Pet Care & more</p>
           </div>
           <div className="text-center text-sm text-white/40">
             <p>Rossari Pet Care (RCPPL) products distributed by Shy</p>
