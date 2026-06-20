@@ -23,7 +23,6 @@ function Nav() {
         </div>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-ink-soft">
           <a href="#brands" className="hover:text-ink transition-colors">Our Brands</a>
-          <a href="#about" className="hover:text-ink transition-colors">About Rossari</a>
           <a href="#products" className="hover:text-ink transition-colors">Products</a>
           <a href="#contact" className="btn-primary py-2 px-5 text-sm">
             Enquire Now
