@@ -6,6 +6,7 @@
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
   }
   body {
     @apply bg-cream-50 text-ink font-sans;
@@ -17,27 +18,24 @@
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center rounded-full px-5 py-3 font-medium transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed;
+    @apply inline-flex items-center justify-center rounded-full px-6 py-3 font-medium transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed;
   }
   .btn-primary {
-    @apply btn bg-peach-500 text-white shadow-warm hover:bg-peach-400 active:translate-y-[1px];
+    @apply btn bg-peach-500 text-white hover:bg-peach-400 active:translate-y-[1px] shadow-warm;
   }
-  .btn-secondary {
+  .btn-outline {
     @apply btn bg-white text-ink ring-1 ring-ink/10 hover:bg-cream-100;
-  }
-  .btn-ghost {
-    @apply btn bg-transparent text-ink hover:bg-cream-100;
-  }
-  .input {
-    @apply w-full rounded-xl border border-ink/10 bg-white px-4 py-3 text-ink placeholder-ink-muted focus:border-peach-300 focus:outline-none focus:ring-2 focus:ring-peach-200;
-  }
-  .label {
-    @apply block text-sm font-medium text-ink-soft mb-1.5;
   }
   .card {
     @apply rounded-2xl bg-white shadow-soft p-6;
   }
   .chip {
     @apply inline-flex items-center gap-1 rounded-full bg-cream-100 px-3 py-1 text-xs font-medium text-ink-soft;
+  }
+  .badge {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold;
+  }
+  .section-label {
+    @apply text-sage-500 font-semibold text-sm uppercase tracking-widest;
   }
 }

@@ -2,23 +2,23 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Shycares — Booking & microsites for pet care pros",
+  title: "Shy — Authorized Distributor of Rossari Pet Care",
   description:
-    "Beautiful microsites, online bookings, customer records, and reminders for solo pet groomers, boarders, and vets in India.",
+    "Shy is an authorized distributor of Rossari Pet Care products in India. Premium dog food, cat food, grooming, supplements and more from Sniffy, Zippy, Toptail, Vetsense and Lozalo.",
   metadataBase: new URL("https://www.shycares.in"),
   openGraph: {
-    title: "Shycares — Run your pet care business online",
+    title: "Shy — Rossari Pet Care Distributor",
     description:
-      "Get a beautiful booking page, manage your calendar, and keep customers coming back. Built for solo pet care pros in India.",
+      "Premium pet food, grooming, and health products from Rossari. Authorized distributor — Shy.",
     url: "https://www.shycares.in",
-    siteName: "Shycares",
+    siteName: "Shy",
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shycares",
-    description: "Online booking and microsites for solo pet care pros.",
+    title: "Shy — Rossari Pet Care",
+    description: "Authorized distributor of Rossari Pet Care products.",
   },
 };
 
@@ -31,11 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
           href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
           rel="stylesheet"

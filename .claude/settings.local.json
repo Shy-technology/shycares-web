@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(dir -Recurse -Depth 3 -Name)",
-      "Bash(Sort-Object)"
+      "Bash(Sort-Object)",
+      "PowerShell(cd \"C:\\\\Users\\\\Kush Gupta\\\\Desktop\\\\shycares-web\"; $items = Get-ChildItem -Path \"app\" -Directory; $items | ForEach-Object { Write-Output $_.FullName })"
     ]
   }
 }
