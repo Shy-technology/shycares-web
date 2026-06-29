@@ -101,7 +101,7 @@ async function generatePODPdf(params: {
   page.drawRectangle({
     x: margin, y, width: contentWidth,
     height: (lineItems.length + 1) * 18 + 20,
-    borderColor: rgb(0.85, 0.88, 0.92), borderWidth: 1, color: rgb(1, 1, 1, 0),
+    borderColor: rgb(0.85, 0.88, 0.92), borderWidth: 1,
   });
 
   y -= 24;
